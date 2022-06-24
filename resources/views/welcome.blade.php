@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel REST API
+                    Build a Laravel REST API
                 </div>
 
                 <div class="links">
