@@ -21,7 +21,7 @@ class BookFactory extends Factory
     {
         return [
             //
-            "title" => $this->faker->sentence(3),
+            "title" => $this->faker->title,
             "author_id" => rand(1, \App\Models\Author::count()),
             "abstract" => $this->faker->paragraph(10),
         ];
