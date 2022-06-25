@@ -1,0 +1,9 @@
+## ALL AUTHORS 
+GET http://localhost:8000/api/authors/
+
+### SINGLE AUTHORS
+GET http://localhost:8000/api/authors/3
+
+### ALL BOOKS
+GET http://localhost:8000/api/books/
+ 

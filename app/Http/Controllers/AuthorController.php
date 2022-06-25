@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Author;
+use App\Http\Resources\AuthorResource;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller
@@ -16,7 +17,7 @@ class AuthorController extends Controller
     public function index()
     {
         //
-        return response(Author::all(), 200);
+        return response(AuthorResource::collection(Author::all(), 200));
     }
 
     /**
@@ -34,7 +35,7 @@ class AuthorController extends Controller
             'company' => 'required',
             'email' => 'required',
         ]);
-        return response(Author::create($data), 201); // 201 Created
+        return response(new AuthorResource(Author::create($data)), 201); // 201 Created
     }
 
     /**
@@ -46,7 +47,7 @@ class AuthorController extends Controller
     public function show(Author $author)
     {
         //
-        return response($author, 200);
+        return response(new AuthorResource($author), 200);
     }
 
     /**
