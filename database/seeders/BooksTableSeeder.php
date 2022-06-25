@@ -15,5 +15,6 @@ class BooksTableSeeder extends Seeder
     public function run()
     {
         //
+        \App\Models\Book::factory()->count(10)->create();
     }
 }
