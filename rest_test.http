@@ -13,7 +13,21 @@ Content-Type: application/json
 
 {
     "name": "Mike Forscutt",
-    "title": "Legend",
-    "company": "Mike",
-    "email": "test@mike.com"
+    "title": "Software Development Instructor",
+    "company": "Treehouse",
+    "email": "michaelforscutt@workmate.com"
 }
+
+### First Author PUT
+POST http://localhost:8000/api/authors/1?_method=PUT
+Content-Type: application/json
+
+{
+    "name": "Mike Forscutt",
+    "title": "Software Development Instructor",
+    "company": "Treehouse",
+    "email": "michaelforscutt@workmate.com"
+}
+
+## First DELETE request
+DELETE http://localhost:8000/api/authors/2

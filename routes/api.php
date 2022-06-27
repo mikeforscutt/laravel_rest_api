@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('authors', 'AuthorController@index');
 Route::get('authors/{author}', 'AuthorController@show');
+Route::put('authors/{author}', 'AuthorController@update');
+Route::patch('authors/{author}', 'AuthorController@update');
 Route::post('authors', 'AuthorController@store');
+Route::delete('authors/{author}', 'AuthorController@destroy');
 
 Route::get('books', 'BookController@index');

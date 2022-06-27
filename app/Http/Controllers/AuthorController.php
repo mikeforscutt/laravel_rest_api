@@ -29,7 +29,6 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $validate = Validator::make($request->toArray(), [
             'name' => 'required',
             'title' => 'required',
@@ -60,15 +59,14 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        //
-        $data = $request->validate([
+        $validate = Validator::make($request->toArray(), [
             'name' => 'required',
             'title' => 'required',
             'company' => 'required',
             'email' => 'required',
         ]);
-        $author->update($data);
-        return response($author->update($data), 200);
+        $author->update($validate->validate());
+        return response(new AuthorResource($author), 201);
     }
 
     /**
